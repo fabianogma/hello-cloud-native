@@ -16,4 +16,5 @@ jobs:
       uses: Azure/cli@v1
       with:
         inlineScript: |
+          az group create --location eastus2 --name rg-cloud-native-fabiano-01
           az acr create --resource-group rg-cloud-native-fabiano-01 --name acrcloudnativecurso --sku Basic
