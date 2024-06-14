@@ -16,5 +16,5 @@ jobs:
       uses: Azure/cli@v1
       with:
         inlineScript: |
-          az group create --location eastus2 --name ${{ variables.AZURE_RG }} 
-          az acr create --resource-group ${{ variables.AZURE_RG }} --name ${{ variables.AZURE_ACR }} --sku Basic
+          az group create --location eastus2 --name ${{ secrets.AZURE_RG }} 
+          az acr create --resource-group ${{ secrets.AZURE_RG }} --name ${{ secrets.AZURE_ACR }} --sku Basic
